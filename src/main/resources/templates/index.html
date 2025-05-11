@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', monospace;
+        }
+        .welcome-card {
+            max-width: 500px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .welcome-card h1 {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+        }
+        .btn-success {
+            background-color: #198754;
+            border-color: #198754;
+            margin-top: 20px;
+        }
+        .btn-success:hover {
+            background-color: #27ae60;
+            border-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+<div class="card welcome-card">
+    <h1>Velkommen til ToDo Listen</h1>
+    <!-- Logout-knapp som sender POST forespørsel til /logout -->
+    <form action="/logout" method="post">
+        <button type="submit" class="btn btn-success w-100">Logg ut</button>
+    </form>
+
+</div>
+</body>
+</html>
